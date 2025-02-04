@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Spencer Flaharty
+- **Dot Number**: flaharty.8
+- **Due Date**: 2/4/25 @12:40 PM EST
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +98,19 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+Like many students in CS majors, my enjoyment of videos games has sparked my interest
+in computers and software in general.  After building my first computer, my interest in computer hardware and software
+really started to grow, eventually influencing me to persue a career in the CS field.  I've also enjoyed studying and learning Mandarin
+since Highschool, which has influenced me to persue a minor in Chinese at OSU.  As of now, I would love to combine my interest in
+Computer Science and learning Mandarin within my career.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -131,8 +119,6 @@ etc. Make of this whatever seems interesting to you, and keep in mind that
 you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +186,114 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: GameLibrary
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - This component would model a game library, with data pertaining to the
+    game's title and time played being stored, ultimately being implemented
+    in a way similar to a Map.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - I'm also thinking about using the Steam API to directly pull game/profile data
+    onto an XML file, but I feel like that might be out of the scope for this project.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void add(String game, int time): Adds the pair (game, time) to this
+    - Library.Pair<String, int> removeAny(): removes and returns a random game
+     and time pair.
+    - void remove(String game): removes the pair whose first component is game
+    - int playTime(String game): Reports the total playtime associated with
+      the game in this
+    - boolean hasGame(String game): Reports if there is a game with the same
+    title in this
+    - int size(): Reports the number of games in this
+
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - String selectAny(): selects a random game from this
+    - void updateTime(String game, int newTime): Replaces the time of a game
+     with newTime in this
+    - String hasTime(int time): Reports if there is a pair in this whose second
+    component is time and returns the game.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I believe so since Map inherits from standard.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - removeAny would return an internal class similar to Map.Pair
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I believe all of my secondary methods can be implemented with kernal methods.
+      For example, selectAny() would rely on removeAny() to get a game, and
+      add to put the game back into the library.
+
+- Component Design #2: MusicPlaylist
+  - **Description**:
+    - Like the title suggests, this component would model a music playlist,
+    with useful methods that are beneficial to the user.
+  - **Kernel Methods**:
+    - void add(String song): adds the song to the end of this
+    - String remove(): removes the song at the front of This
+    - int size(): returns the number of songs in the playlist
+  - **Secondary Methods**:
+    - void combine(MusicPlaylist< String > otherPlaylist): adds another
+    playlist to this, combining the entries.
+    - String currentSong(): reports the current song at the front of this
+    - void shuffle(): changes the order of the songs in this in a semi-random
+    way.
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - I believe so since Queue inherits from standard.
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - It would not rely on any internal classes.
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - I don't know.
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - I can implement all of the secondary methods using kernal methods.
+      For instance, combine would use remove and add to remove all elements from
+      the otherPlaylist and add them to this.
+
+- Component Design #3: StoreInventory
+  - **Description**:
+    - This component would model a store's inventory, storing the product name
+    and the number of any given product that is stocked.
+
+  - **Kernel Methods**
+    - void add(String product, int stock): adds a product and it's inventory to
+    this.
+    - Store.Pair< String, int > remove(String product): removes a product from this
+    - int stock(String product): returns the stock value from the given product
+    - boolean hasProduct (String product): would report if there is a product
+    with the given name
+    - int size(): reports how many different products are in stock at the store
+  - **Secondary Methods**:
+    - int updateStock(String product, int stock): replaces the stock value
+    in this and returns the old value.
+    - boolean compareStores(StoreInventory< String, int > otherStore):
+    reports if the current store and otherStore share any of the same product
+    - void combineInventory(StoreInventory< String, int > otherStore): combines
+    the products from the other store into this.
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - I believe so since Map inherits from standard
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - I would need to use something like Map.Pair (Store.Pair) with the
+      remove kernal method.
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - I don't know
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - I can implement my secondary methods using the kernal methods.
+      For example, compareStores would use hasProduct to check if each store
+      has duplicate products.
 
 ## Post-Assignment
 
@@ -269,8 +301,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -308,8 +338,6 @@ designs, so we can gauge your progress. Please keep it updated at each stage
 of development.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
