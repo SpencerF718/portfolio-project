@@ -13,3 +13,13 @@ the following form: YYYY.0M.0D.
 - Designed a GameLibrary component
 - Designed a MusicPlaylist component
 - Designed a StoreInventory component
+
+## 2025.02.19
+
+### Added
+
+- Designed a proof of concept for GameLibrary component.
+
+### Updated
+
+- Changed design to include a Game component instead of a string representation for many of the methods.
