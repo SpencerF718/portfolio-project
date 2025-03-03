@@ -2,10 +2,7 @@ package components.GameLibrary;
 
 public abstract class GameLibraryKernel {
 
-    /*
-     * I will be using arrays under the hood. As a result, I'm selecting an
-     * upper bound for the maximun library size.
-     */
+    // there will be an upper bound of 1000 items in the library.
     private static final int MAX_SIZE = 1000;
     private final Game[] gameArr;
     private final int[] playtimeArr;
@@ -26,11 +23,7 @@ public abstract class GameLibraryKernel {
             this.playtimeArr[this.librarySize] = playtime;
             this.librarySize++;
         } else {
-            /*
-             * let user know that their library is too large. For this, I'm
-             * throwing an error. If there is a better way to do this, let me
-             * know.
-             */
+            //let user know that their library is too large.
             throw new IllegalStateException("Game library is full");
         }
     }
@@ -40,11 +33,7 @@ public abstract class GameLibraryKernel {
         if (this.librarySize != 0) {
             // removes the first game in library
             Game removedGame = this.gameArr[0];
-            /*
-             * loop to shift entire array to avoid blank spots in array. I think
-             * this is probably super expensive in terms of performance, so this
-             * may be adjusted in the future.
-             */
+            // shift array to avoid blank spots.
             for (int i = 1; i < this.librarySize; i++) {
                 this.gameArr[i - 1] = this.gameArr[i];
                 this.playtimeArr[i - 1] = this.playtimeArr[i];
