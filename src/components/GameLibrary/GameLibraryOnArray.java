@@ -10,11 +10,23 @@ package components.GameLibrary;
  *
  * @Correspondence this = {(gameArr[i], playtimeArr[i])}
  */
-public class GameLibraryOnArray extends Standard<Game> {
+public class GameLibraryOnArray extends GameLibrarySecondary {
 
+    /**
+     * The maximum number of games that the library can hold.
+     */
     public static final int MAX_SIZE = 1000;
+    /**
+     * Array to store Games in the library.
+     */
     private final Game[] gameArr;
+    /**
+     * Array to store the playtimes in the library.
+     */
     private final int[] playtimeArr;
+    /**
+     * The current size of the library.
+     */
     private int librarySize;
 
     /**
@@ -33,40 +45,19 @@ public class GameLibraryOnArray extends Standard<Game> {
         this.librarySize = 0;
     }
 
-    /**
-     *
-     * Adds a new game with its playtime to the library.
-     *
-     * @param game
-     *            the game to add
-     * @param playtime
-     *            the playtime to add
-     */
     @Override
     public void add(Game game, int playtime) {
-        if (this.librarySize >= MAX_SIZE) {
-            throw new IllegalStateException("Game library is already full.");
-        }
-        if (this.hasGame(game)) {
-            throw new IllegalArgumentException("Game already exists.");
-        }
+        assert this.librarySize < MAX_SIZE : "Game library is already full";
+        assert !this.hasGame(game) : "Game already exists";
 
         this.gameArr[this.librarySize] = game;
         this.playtimeArr[this.librarySize] = playtime;
         this.librarySize++;
     }
 
-    /**
-     * Removes and returns an arbritrary game from the library.
-     *
-     * @return the removed game
-     */
     @Override
     public Game removeAny() {
-        if (this.librarySize == 0) {
-            throw new IllegalStateException("Library is empty.");
-        }
-
+        assert this.librarySize > 0 : "Library is empty";
         Game removedGame = this.gameArr[0];
 
         for (int i = 1; i < this.librarySize; i++) {
@@ -78,12 +69,6 @@ public class GameLibraryOnArray extends Standard<Game> {
         return removedGame;
     }
 
-    /**
-     * removes the indicated game from the library.
-     *
-     * @param game
-     *            the game that will be removed
-     */
     @Override
     public void remove(Game game) {
         boolean isFound = false;
@@ -98,20 +83,10 @@ public class GameLibraryOnArray extends Standard<Game> {
             }
         }
 
-        if (!isFound) {
-            throw new IllegalArgumentException("Game not in Library");
-        }
+        assert isFound : "Game not in Library";
         this.librarySize--;
     }
 
-    /**
-     *
-     * returns the playtime for a given Game.
-     *
-     * @param game
-     *            the game for which the playtime is associated with
-     * @return the playtime of the game
-     */
     @Override
     public int playtime(Game game) {
         int pt = 0;
@@ -123,14 +98,6 @@ public class GameLibraryOnArray extends Standard<Game> {
         return pt;
     }
 
-    /**
-     *
-     * Checks if the game is in the library.
-     *
-     * @param game
-     *            the game being checked for
-     * @return true if the game is found, false otherwise
-     */
     @Override
     public boolean hasGame(Game game) {
         boolean foundGame = false;
@@ -142,14 +109,32 @@ public class GameLibraryOnArray extends Standard<Game> {
         return foundGame;
     }
 
-    /**
-     *
-     * returns the size of the current library.
-     *
-     * @return the size of the library
-     */
     @Override
     public int size() {
         return this.librarySize;
+    }
+
+    @Override
+    public void clear() {
+        this.librarySize = 0;
+    }
+
+    @Override
+    public GameLibrary newInstance() {
+        return new GameLibraryOnArray();
+    }
+
+    @Override
+    public void transferFrom(GameLibrary source) {
+        assert source instanceof GameLibraryOnArray : "Source must be equivalent to GameLibraryOnArray";
+
+        GameLibraryOnArray gl2 = (GameLibraryOnArray) source;
+        this.librarySize = gl2.librarySize;
+
+        for (int i = 0; i < this.librarySize; i++) {
+            this.gameArr[i] = gl2.gameArr[i];
+            this.playtimeArr[i] = gl2.playtimeArr[i];
+        }
+        gl2.createNewRep();
     }
 }
