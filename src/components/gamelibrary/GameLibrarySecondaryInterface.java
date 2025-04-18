@@ -3,7 +3,8 @@ package components.gamelibrary;
 /**
  * GameLibrary component with secondary methods.
  */
-public interface GameLibrarySecondary extends GameLibraryKernel {
+public interface GameLibrarySecondaryInterfaceInterface
+        extends GameLibraryKernel {
 
     /**
      * Selects a game from the library.

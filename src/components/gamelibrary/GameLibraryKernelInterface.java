@@ -1,9 +1,11 @@
+package components.gamelibrary;
+
 import components.standard.Standard;
 
 /**
  * GameLibrary Kernel component with primary methods.
  */
-public interface GameLibraryKernel extends Standard<Game> {
+public interface GameLibraryKernelInterface extends Standard<Game> {
 
     /**
      * Adds a given game with its corresponding playtime to the library.
