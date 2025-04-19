@@ -40,4 +40,14 @@ public interface GameLibrarySecondaryInterface
      */
     Game hasTime(int playtime);
 
+    /**
+     * Compares GameLibrary with another object to see if they are equal.
+     *
+     * @param obj
+     *            the object to compare against
+     * @return true if equal, false if not
+     */
+    @Override
+    boolean equals(Object obj);
+
 }

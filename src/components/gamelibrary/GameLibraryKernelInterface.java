@@ -78,6 +78,7 @@ public interface GameLibraryKernelInterface
      * @ensures this.size() = 0
      *
      */
+    @Override
     void clear();
 
     /**
@@ -86,6 +87,7 @@ public interface GameLibraryKernelInterface
      * @return a new GameLibraryOnArray instance with no games.
      * @ensures returned objects is of the same type and empty.
      */
+    @Override
     GameLibraryOnArray newInstance();
 
     /**
@@ -99,6 +101,7 @@ public interface GameLibraryKernelInterface
      * @requires source is of type GameLibraryOnArray
      * @ensures this = #source and source.size() = 0
      */
+    @Override
     void transferFrom(GameLibraryOnArray source);
 
 }

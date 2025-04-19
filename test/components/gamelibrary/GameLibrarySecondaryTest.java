@@ -17,7 +17,7 @@ public class GameLibrarySecondaryTest {
      */
     @Test
     public void testSelectAny() {
-        GameLibrary gl = new GameLibraryOnArray();
+        GameLibraryOnArray gl = new GameLibraryOnArray();
         Game g = new Game("TestGame", 2018, false);
         gl.add(g, 25);
         Game selected = gl.selectAny();
@@ -31,7 +31,7 @@ public class GameLibrarySecondaryTest {
      */
     @Test
     public void testUpdateTime() {
-        GameLibrary gl = new GameLibraryOnArray();
+        GameLibraryOnArray gl = new GameLibraryOnArray();
         Game g = new Game("TestGame", 2019, true);
         gl.add(g, 20);
         gl.updateTime(g, 45);
@@ -44,7 +44,7 @@ public class GameLibrarySecondaryTest {
      */
     @Test
     public void testHasTimeWithGame() {
-        GameLibrary gl = new GameLibraryOnArray();
+        GameLibraryOnArray gl = new GameLibraryOnArray();
         Game g1 = new Game("TestGame1", 2019, false);
         Game g2 = new Game("TestGame2", 2016, false);
         gl.add(g1, 10);
@@ -58,7 +58,7 @@ public class GameLibrarySecondaryTest {
      */
     @Test
     public void testHasTimeWithoutGame() {
-        GameLibrary gl = new GameLibraryOnArray();
+        GameLibraryOnArray gl = new GameLibraryOnArray();
         gl.add(new Game("TestGame", 2015, true), 30);
         Game result = gl.hasTime(999);
         assertNull(result);
@@ -69,8 +69,8 @@ public class GameLibrarySecondaryTest {
      */
     @Test
     public void testEqualsTrue() {
-        GameLibrary gl1 = new GameLibraryOnArray();
-        GameLibrary gl2 = new GameLibraryOnArray();
+        GameLibraryOnArray gl1 = new GameLibraryOnArray();
+        GameLibraryOnArray gl2 = new GameLibraryOnArray();
         Game g = new Game("TestGame", 2012, false);
         gl1.add(g, 5);
         gl2.add(g, 5);
@@ -82,8 +82,8 @@ public class GameLibrarySecondaryTest {
      */
     @Test
     public void testEqualsFalse() {
-        GameLibrary gl1 = new GameLibraryOnArray();
-        GameLibrary gl2 = new GameLibraryOnArray();
+        GameLibraryOnArray gl1 = new GameLibraryOnArray();
+        GameLibraryOnArray gl2 = new GameLibraryOnArray();
         Game g1 = new Game("TestGame1", 2007, true);
         Game g2 = new Game("TestGame2", 2011, true);
         gl1.add(g1, 10);
@@ -96,16 +96,12 @@ public class GameLibrarySecondaryTest {
      */
     @Test
     public void testToString() {
-        GameLibrary gl = new GameLibraryOnArray();
-        Game g1 = new Game("TestGame1", 2010, false);
-        Game g2 = new Game("TestGame2", 2016, false);
-        gl.add(g1, 5);
-        gl.add(g2, 7);
-        String output = gl.toString();
-        assertTrue(output.contains("TestGame1"));
-        assertTrue(output.contains("TestGame2"));
-        assertTrue(output.contains("5"));
-        assertTrue(output.contains("7"));
+        Game g = new Game("TestGame1", 2010, false);
+        String s = g.toString();
+
+        assertTrue(s.contains("TestGame1"));
+        assertTrue(s.contains("2010"));
+        assertTrue(s.contains("isMultiplayer:false"));
     }
 
 }

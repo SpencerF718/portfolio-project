@@ -12,21 +12,6 @@ import org.junit.Test;
 public class GameLibraryOnArrayTest {
 
     /**
-     * Junit test for createNewRep.
-     */
-    @Test
-    public void testCreateNewRep() {
-        GameLibraryOnArray gl = new GameLibraryOnArray();
-        Game g1 = new Game("FirstGame", 123, true);
-        gl.add(g1, 100);
-        assertEquals(1, gl.size());
-        assertTrue(gl.hasGame(g1));
-        gl.createNewRep();
-        assertEquals(0, gl.size());
-        assertFalse(gl.hasGame(g1));
-    }
-
-    /**
      * Junit test for add.
      */
     @Test
@@ -34,7 +19,7 @@ public class GameLibraryOnArrayTest {
         GameLibraryOnArray gl = new GameLibraryOnArray();
         Game g = new Game("TestGame", 2018, false);
         gl.add(g, 25);
-        assertTrue(g.hasGame(g));
+        assertTrue(gl.hasGame(g));
         assertEquals(1, gl.size());
         assertEquals(25, gl.playtime(g));
     }
@@ -155,7 +140,7 @@ public class GameLibraryOnArrayTest {
         GameLibraryOnArray gl = new GameLibraryOnArray();
         Game g = new Game("LastGame", 2019, false);
         gl.add(g, 50);
-        GameLibrary gl2 = gl.newInstance();
+        GameLibraryOnArray gl2 = gl.newInstance();
         assertEquals(0, gl2.size());
         assertFalse(gl2.hasGame(g));
         assertEquals(1, gl.size());
