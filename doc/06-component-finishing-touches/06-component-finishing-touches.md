@@ -303,18 +303,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I feel much more comfortable now creating a component from scratch.  Starting this process from scratch has also given me the confidence and know-how to create my own personal projects.  This process has also made the software development process/cycle much less intimidating.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+This project showed me that while I did have the knowledge to create a project piece-by-piece, starting from scratch and connecting these “pieces” was a skill that needed to be refined.  These gaps were mostly filled by the fact that the instructions and resources for this project were fairly helpful and in depth.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+Overall, my perspective of software development has generally stayed the same (positive).  However, my enjoyment towards creating and developing software has improved considerably.  Knowing that my software skills directly impact what I can create and accomplish has given me lots of motivation to pursue personal projects.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -322,29 +322,29 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Creating my own data type (Game) was one problem that was mostly new to me.  By creating a novel type, I began to understand the utility and underlying reason why one should create their own type.  I also learned how to go from interfaces, to method implementations, producing something that is directly useful.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Gained valuable experience creating a custom data type from scratch
+- Learned the purpose of defining your own types to represent various concepts
+- Learned how to use component based design to make an easily changeable project.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+This project has affirmed my career trajectory.  Before this, while I knew I loved software and programming in general, I never got to apply it in any immediately useful or inspiring way.  Now, I know that the development cycle of creating a project is something that I enjoy.  In fact, I’ve already begun to work on other side projects.  I’ve been particularly inspired to work on a Pinyin translation tool, combining my Chinese minor with my major in a useful and tangible way.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I would like to continue creating side projects for my own personal use, or just for the sake of creating them in general.  By continuing this practice, my confidence in my development abilities will surely grow and my ability to tackle more complex issues will widen.  So far, I’ve been incredibly fortunate to be surrounded by instructors and friends that  have helped me on my current path.  Currently, some instructors involved with my minor have given some great guidance and career advice relevant to both my major and minor.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -363,8 +363,8 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed test suite for <!-- insert name of component here --> component
-- Designed two different use cases for <!-- insert name of component here --> component
+- Designed test suite for GameLibrary component
+- Designed two different use cases for GameLibrary component
 
 ### Updated
 
@@ -379,8 +379,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull

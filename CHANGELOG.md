@@ -13,3 +13,16 @@ the following form: YYYY.0M.0D.
 - Designed a GameLibrary component
 - Designed a MusicPlaylist component
 - Designed a StoreInventory component
+
+## 2025.4.18
+
+### Added
+
+- Designed test suite for GameLibrary component
+- Designed two different use cases for GameLibrary component
+
+### Updated
+
+- Changed design to include better file management
+
+```
