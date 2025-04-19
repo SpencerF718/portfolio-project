@@ -121,8 +121,8 @@ public class GameLibraryOnArrayTest {
     @Test
     public void testClear() {
         GameLibraryOnArray gl = new GameLibraryOnArray();
-        Game g1 = new Game("GameOne", 2016, true)
-        Game g2 = new Game("GameTwo", 2016, false)
+        Game g1 = new Game("GameOne", 2016, true);
+        Game g2 = new Game("GameTwo", 2016, false);
         gl.add(g1, 50);
         gl.add(g2, 10);
         gl.clear();

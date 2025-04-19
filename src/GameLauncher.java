@@ -1,3 +1,5 @@
+import components.gamelibrary.Game;
+import components.gamelibrary.GameLibraryOnArray;
 
 /**
  * Demo to demonstrate that GameLibrary could be used as part of a game
@@ -7,10 +9,10 @@
  */
 public class GameLauncher {
 
-    private GameLibrary library;
+    private GameLibraryOnArray library;
 
     public GameLauncher() {
-        this.library = new GameLibraryOnArray;
+        this.library = new GameLibraryOnArray();
     }
 
     /**

@@ -1,4 +1,6 @@
-package components.gamelibrary;
+import components.gamelibrary.Game;
+import components.gamelibrary.GameLibraryOnArray;
+import components.gamelibrary.GameLibrarySecondaryInterface;
 
 /**
  * Demo use case for GameLibrary. This demo is to show that GameLibrary can act
@@ -18,7 +20,7 @@ public final class GameLibraryDemo {
      * @param args
      */
     public static void main(String[] args) {
-        GameLibrary gl = new GameLibraryOnArray();
+        GameLibrarySecondaryInterface gl = new GameLibraryOnArray();
 
         Game g1 = new Game("Outer Wilds", 2019, false);
         Game g2 = new Game("Escape From Tarkov", 2025, true);
