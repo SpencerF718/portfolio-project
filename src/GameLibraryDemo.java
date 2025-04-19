@@ -29,7 +29,6 @@ public final class GameLibraryDemo {
         gl.add(g2, 25);
 
         System.out.println("Game count: " + gl.size());
-        System.out.println("Game with 15 hours: " + gl.hasTime(15));
         System.out.println("Random game: " + gl.selectAny());
 
         gl.updateTime(g2, 30);

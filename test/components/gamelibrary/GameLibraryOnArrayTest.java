@@ -146,5 +146,4 @@ public class GameLibraryOnArrayTest {
         assertEquals(1, gl.size());
         assertTrue(gl.hasGame(g));
     }
-
 }

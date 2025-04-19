@@ -30,17 +30,6 @@ public interface GameLibrarySecondaryInterface
     void updateTime(Game game, int playtime);
 
     /**
-     * Checks and returns if there is a game in the library with the given
-     * playtime
-     *
-     * @param playtime
-     *            the playtime that will be checked in the library
-     * @return a game with a matching playtime value
-     * @ensures playtime is in the library if returning a Game value
-     */
-    Game hasTime(int playtime);
-
-    /**
      * Compares GameLibrary with another object to see if they are equal.
      *
      * @param obj

@@ -2,7 +2,6 @@ package components.gamelibrary;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -37,31 +36,6 @@ public class GameLibrarySecondaryTest {
         gl.updateTime(g, 45);
         assertEquals(45, gl.playtime(g));
         assertEquals(1, gl.size());
-    }
-
-    /**
-     * Junit test for hasTime with a game.
-     */
-    @Test
-    public void testHasTimeWithGame() {
-        GameLibraryOnArray gl = new GameLibraryOnArray();
-        Game g1 = new Game("TestGame1", 2019, false);
-        Game g2 = new Game("TestGame2", 2016, false);
-        gl.add(g1, 10);
-        gl.add(g2, 25);
-        Game result = gl.hasTime(25);
-        assertEquals(g2, result);
-    }
-
-    /**
-     * Junit test for hasTime with a corresponding game.
-     */
-    @Test
-    public void testHasTimeWithoutGame() {
-        GameLibraryOnArray gl = new GameLibraryOnArray();
-        gl.add(new Game("TestGame", 2015, true), 30);
-        Game result = gl.hasTime(999);
-        assertNull(result);
     }
 
     /**

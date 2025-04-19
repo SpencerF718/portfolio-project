@@ -53,5 +53,4 @@ public class Game {
         return "title: " + this.title + ", releaseYear: " + this.releaseYear
                 + ", isMultiplayer:" + this.isMultiplayer;
     }
-
 }

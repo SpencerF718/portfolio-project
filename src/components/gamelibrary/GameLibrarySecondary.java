@@ -21,20 +21,7 @@ public abstract class GameLibrarySecondary
     }
 
     @Override
-    public final Game hasTime(int playtime) {
-        Game foundGame = null;
-        for (int i = 0; i < this.size(); i++) {
-            Game currGame = this.removeAny();
-            if (this.playtime(currGame) == playtime) {
-                foundGame = currGame;
-            }
-            this.add(currGame, this.playtime(currGame));
-        }
-        return foundGame;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
+    public final boolean equals(Object obj) {
         if (!(obj instanceof GameLibraryOnArray)) {
             return false;
         }
